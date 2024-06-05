@@ -1,2 +1,2 @@
-sam-deploy:
-    sam build && sam deploy --guided
+dev:
+	sam build && sam local start-api
