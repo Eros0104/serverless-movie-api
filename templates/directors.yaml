@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  GetMovieFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: main # Assuming main is your entry point
+      Runtime: 'go1.x'
+      CodeUri: ../cmd/directors
+      Environment:
+        Variables:
+          PARAM1: 'value1'
+      Events:
+        GetAllDirectors:
+          Type: Api
+          Properties:
+            Path: /directors
+            Method: get

@@ -6,3 +6,7 @@ Resources:
     Type: 'AWS::Serverless::Application'
     Properties:
       Location: ./templates/movies.yaml
+  DirectorAPI:
+    Type: 'AWS::Serverless::Application'
+    Properties:
+      Location: ./templates/directors.yaml
